@@ -17,27 +17,27 @@ import application.repository.CompromissoRepository;
 @RequestMapping("/compromissos")
 public class CompromissoController {
     @Autowired
-    private CompromissoRepository CompromissoRepo;
+    private CompromissoRepository compromissoRepo;
 
     @GetMapping
     public List<Compromisso> getAll() {
-        return (List<Compromisso>) CompromissoRepo.findAll();
+        return (List<Compromisso>) compromissoRepo.findAll();
     }
 
     @PostMapping
-    public Compromisso post(@RequestBody Compromisso Compromisso) {
-        return CompromissoRepo.save(Compromisso);
+    public Compromisso post(@RequestBody Compromisso compromisso) {
+        return compromissoRepo.save(compromisso);
     }
 
     @GetMapping("/{id}")
     public Compromisso get(@PathVariable Long id) {
-        return CompromissoRepo.findById(id).get();
+        return compromissoRepo.findById(id).get();
     }
 
     @PostMapping("/{id}")
-    public Compromisso put(@RequestBody Compromisso Compromisso, @PathVariable Long id) {
-        Compromisso resultado = CompromissoRepo.findById(id).get();
-        resultado.setDescricao(Compromisso.getDescricao());
-        return CompromissoRepo.save(Compromisso);
+    public Compromisso put(@RequestBody Compromisso compromisso, @PathVariable Long id) {
+        Compromisso resultado = compromissoRepo.findById(id).get();
+        resultado.setDescricao(compromisso.getDescricao());
+        return compromissoRepo.save(compromisso);
     }
 }

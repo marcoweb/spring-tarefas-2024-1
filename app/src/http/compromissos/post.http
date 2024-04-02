@@ -1,10 +1,8 @@
-POST  https://8080-marcoweb-springtarefas2-vr7pihseyw0.ws-us110.gitpod.io/compromissos
+POST  https://8080-marcoweb-springtarefas2-q7ahsbeb67h.ws-us110.gitpod.io/compromissos
 Content-Type: application/json
 
 {
     "descricao": "Exemplo",
-    "dataInicio": "02/04/2024",
-    "dataFim": "02/04/2024",
-    "horaInicio": "09:13:00",
-    "horaFim": "10:13:00"
+    "dataHoraInicial": "02/04/2024 08:00:00 AM",
+    "dataHoraFinal": "02/04/2024 10:00:00 AM"
 }

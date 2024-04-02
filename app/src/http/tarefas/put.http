@@ -1,0 +1,7 @@
+PUT  https://8080-marcoweb-springtarefas2-q7ahsbeb67h.ws-us110.gitpod.io/tarefas/2
+Content-Type: application/json
+
+{
+    "descricao": "Exemplo 2",
+    "concluido": true
+}

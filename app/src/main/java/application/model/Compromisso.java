@@ -1,5 +1,9 @@
 package application.model;
 
+import java.util.Calendar;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,10 +15,15 @@ public class Compromisso {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String descricao;
-    private String dataInicio;
-    private String dataFim;
-    private String horaInicio;
-    private String horaFim;
+    // private String dataInicio;
+    // private String dataFim;
+    // private String horaInicio;
+    // private String horaFim;
+
+    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
+    private Calendar dataHoraInicial;
+    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
+    private Calendar dataHoraFinal;
 
     public Long getId() {
         return id;
@@ -28,28 +37,43 @@ public class Compromisso {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-    public String getDataInicio() {
-        return dataInicio;
+    public Calendar getDataHoraInicial() {
+        return dataHoraInicial;
     }
-    public void setDataInicio(String dataInicio) {
-        this.dataInicio = dataInicio;
+    public void setDataHoraInicial(Calendar dataHoraInicial) {
+        this.dataHoraInicial = dataHoraInicial;
     }
-    public String getDataFim() {
-        return dataFim;
+    public Calendar getDataHoraFinal() {
+        return dataHoraFinal;
     }
-    public void setDataFim(String dataFim) {
-        this.dataFim = dataFim;
+    public void setDataHoraFinal(Calendar dataHoraFinal) {
+        this.dataHoraFinal = dataHoraFinal;
     }
-    public String getHoraInicio() {
-        return horaInicio;
-    }
-    public void setHoraInicio(String horaInicio) {
-        this.horaInicio = horaInicio;
-    }
-    public String getHoraFim() {
-        return horaFim;
-    }
-    public void setHoraFim(String horaFim) {
-        this.horaFim = horaFim;
-    }
+
+    
+
+    // public String getDataInicio() {
+    //     return dataInicio;
+    // }
+    // public void setDataInicio(String dataInicio) {
+    //     this.dataInicio = dataInicio;
+    // }
+    // public String getDataFim() {
+    //     return dataFim;
+    // }
+    // public void setDataFim(String dataFim) {
+    //     this.dataFim = dataFim;
+    // }
+    // public String getHoraInicio() {
+    //     return horaInicio;
+    // }
+    // public void setHoraInicio(String horaInicio) {
+    //     this.horaInicio = horaInicio;
+    // }
+    // public String getHoraFim() {
+    //     return horaFim;
+    // }
+    // public void setHoraFim(String horaFim) {
+    //     this.horaFim = horaFim;
+    // }
 }
