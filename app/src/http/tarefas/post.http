@@ -2,6 +2,5 @@ POST  https://8080-marcoweb-springtarefas2-q7ahsbeb67h.ws-us110.gitpod.io/tarefa
 Content-Type: application/json
 
 {
-    "descricao": "Exemplo 2",
-    "concluido": true
+
 }
